@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  ubl_to_json_api:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+    volumes:
+      - ./uploads:/app/uploads
