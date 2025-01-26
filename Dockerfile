@@ -9,7 +9,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code
-COPY . .
+COPY src/ ./src/
+COPY app.py .
 
 # Set the environment variable for Flask
 ENV FLASK_ENV=production

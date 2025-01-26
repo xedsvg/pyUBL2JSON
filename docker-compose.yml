@@ -7,5 +7,7 @@ services:
       - "8080:8080"
     environment:
       - PORT=8080
+      - RATELIMIT_DEFAULT=100 per minute
+      - RATELIMIT_STORAGE_URL=memory://
     volumes:
       - ./uploads:/app/uploads
